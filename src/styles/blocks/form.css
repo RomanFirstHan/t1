@@ -1,0 +1,29 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   max-width: 556px;
+   row-gap: 25px;
+}
+
+.form__item {
+   display: flex;
+   flex-direction: column;
+   row-gap: 15px;
+}
+
+.form__input {
+
+   border: 1px solid black;
+   border-radius: 14px;
+
+   padding: 18px 30px;
+}
+
+.form__input::placeholder {
+   font-size: 18px;
+
+}
+
+.form__button {
+   margin-top: 15px;
+}
