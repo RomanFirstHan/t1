@@ -1,0 +1,23 @@
+.block {
+   padding: 60px 0;
+   display: flex;
+   flex-direction: column;
+   row-gap: 30px;
+}
+
+.block__title {
+   align-self: start;
+   padding: 30px;
+   font-size: 64px;
+   color: white;
+   background-color: #00AAE6;
+   border-radius: 20px;
+   line-height: 40px;
+}
+
+.block__body {
+   padding: 60px;
+   background-color: #F3F3F3;
+   border-radius: 45px;
+
+}
