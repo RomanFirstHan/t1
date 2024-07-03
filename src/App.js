@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './styles/App.css'
 import BodySteps from "./components/BodySteps";
 import StepN1 from "./components/StepN1";
+import StepN2 from './components/StepN2'
 
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
   
 
   const step1 = <StepN1 email = {setEmail} lname ={setLastName} roles={setRoles} fname ={setName}/>
+  const step2 = <StepN2 email = {setEmail} lname ={setLastName} roles={setRoles} fname ={setName}/>
 
   return (
     <div className="App">
-      <BodySteps title='Шаг 1' body = {step1} />
+      <BodySteps title='Шаг 2' body = {step2} />
     </div>
     
   );

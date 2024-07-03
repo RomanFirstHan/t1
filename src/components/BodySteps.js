@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BodySteps({title, body, email}) {
+function BodySteps({title, body}) {
    const numberStep = title
    const bodyStep = body
   return (

@@ -31,15 +31,15 @@ function StepN1({email, fname, lname, roles}) {
       <form className='form' onSubmit={handleSubmit}>
         <div className='form__item'>
           <label htmlFor="name" className='form__title'>Имя</label>
-          <input type="text" placeholder='Имя' id="name" className='form__input' onChange = {(e) => fname(e.target.value)}/>
+          <input type="text" placeholder='Имя' id="name" className='form__input input' onChange = {(e) => fname(e.target.value)}/>
         </div>
         <div className='form__item'>
           <label htmlFor="lastName" className='form__title'>Фамилия</label>
-          <input type="text" placeholder='Фамилия' id="lastName" className='form__input' onChange = {(e) => lname(e.target.value)}/>
+          <input type="text" placeholder='Фамилия' id="lastName" className='form__input input' onChange = {(e) => lname(e.target.value)}/>
         </div>
         <div className='form__item'>
           <label htmlFor="email" className='form__title'>Email</label>
-          <input type="email" placeholder='Email' id="email" className='form__input' onChange = {(e) => email(e.target.value)}/>
+          <input type="email" placeholder='Email' id="email" className='form__input input' onChange = {(e) => email(e.target.value)}/>
         </div>
         <button  className='button form__button'>Получить список ролей</button>
       </form>
