@@ -1,50 +1,48 @@
 import React, { useState } from 'react'
 
-export default function StepN2() {
-   
-   
-   const handleSubmit = async () => {
-      
-      fetch('http://193.19.100.32:7000/api/get-roles', {
-        'method': 'GET',  
-  
-      })
+export default function StepN2({ roles, handleIncreaseStep }) {
+
+  const handleSubmit = async () => {
+    // Тут как я понимаю будет другой фетч запрос. Кстати, метод ГЕТ стоит по умолчанию и его можно не прописывать
+    fetch('http://193.19.100.32:7000/api/get-roles', {
+      'method': 'GET',
+
+    })
       .then(response => response.json())
       .then(result => result.roles)
-      .catch(err => console.log(err))    
-    } 
-    
-    handleSubmit()
+      .then(() => handleIncreaseStep())
+      .catch(err => console.log(err))
+  }
 
 
-   // fetch('http://193.19.100.32:7000/api/get-roles', {
-   //    'method': 'GET',  
+  // fetch('http://193.19.100.32:7000/api/get-roles', {
+  //    'method': 'GET',  
 
-   //  })
-   //  .then(response => response.json())
-   //  .then(result => {
-   //    let y = result.roles
-   //    console.log(y)
-   //  })
+  //  })
+  //  .then(response => response.json())
+  //  .then(result => {
+  //    let y = result.roles
+  //    console.log(y)
+  //  })
 
-   //  .catch(err => console.log(err))
-    
+  //  .catch(err => console.log(err))
 
-   
-   //  const options = (res) => {
-   //    console.log(res)
-   //  } 
 
-   //  options()
+
+  //  const options = (res) => {
+  //    console.log(res)
+  //  } 
+
+  //  options()
   return (
     <form className='form'>
       <div className='form__body'>
-         <select name="" id="roles" className="form__input input" required>
-            <option value="disabled" disabled selected>Выберите роль</option>
-            
-         </select>
+        <select name="" id="roles" className="form__input input" required>
+          <option value="disabled" disabled selected>Выберите роль</option>
+
+        </select>
       </div>
-      <button className='button form__button' type='button'>Получить код</button>
+      <button className='button form__button' type='button' onClick={handleSubmit}>Получить код</button>
     </form>
   )
 }
