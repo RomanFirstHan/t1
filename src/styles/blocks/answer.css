@@ -1,4 +1,7 @@
 .answer {
    max-width: 50%;
+}
+
+.answer__title {
    font-weight: 700;
 }
