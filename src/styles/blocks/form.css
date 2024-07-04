@@ -31,3 +31,18 @@
 .input {
    min-width: 100%;
 }
+
+.option {
+   margin: 20px;
+}
+
+.title {
+   font-size: 20px;
+   font-weight: 700;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.section__form {
+   flex: 1 1 auto;
+}
