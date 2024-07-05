@@ -1,12 +1,15 @@
 import React from "react";
 
-export default function StepN4({ handleIncreaseStep, answer }) {
-  const code = "*".repeat(answer.length) + answer.slice(-4);
+export default function StepN4({ email, handleIncreaseStep, answer }) {
+  const code = "*".repeat(answer.length-4) + answer.slice(-4);
 
   const handleSubmit = () => {
-    console.log("gay");
     handleIncreaseStep();
   };
+
+  
+
+  
 
   return (
     <div className="section--form">

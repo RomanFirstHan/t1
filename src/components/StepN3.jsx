@@ -9,7 +9,6 @@ export default function StepN3({
   const url = "http://193.19.100.32:7000/api/get-code?email=" + email;
 
   const handleSubmit = async () => {
-    // Тут как я понимаю будет другой фетч запрос. Кстати, метод ГЕТ стоит по умолчанию и его можно не прописывать
     fetch(url, {
       method: "GET",
       //   'body': JSON.stringify(body),
@@ -20,6 +19,7 @@ export default function StepN3({
       .then(() => handleIncreaseStep())
       .catch((err) => console.log(err));
   };
+
 
   return (
     <div className="section--form">
