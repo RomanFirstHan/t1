@@ -32,7 +32,7 @@ export default function StepN5({answer, email, setAnswer, handleIncreaseStep}) {
 
 
   return (
-   <div className="section--form">
+   <div className="section-form">
       <div className="section__form form">
         <div className="form__title title">
         Установить статус increased 

@@ -6,4 +6,5 @@
 @import url(./blocks/button.css);
 @import url(./blocks/form.css);
 @import url(./blocks/section.css);
-@import url(./blocks/answer.css)
+@import url(./blocks/answer.css);
+@import url(./blocks/loading.css)

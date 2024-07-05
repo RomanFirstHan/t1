@@ -1,8 +1,10 @@
 .answer {
    max-width: 50%;
+   flex: 1 1 auto;
 }
 
 .answer__title {
+   text-align: center;
    font-weight: 700;
    word-wrap: break-word;
 }

@@ -12,7 +12,7 @@ export default function StepN4({ email, handleIncreaseStep, answer }) {
   
 
   return (
-    <div className="section--form">
+    <div className="section-form">
       <div className="section__form form">
         <div className="form__title title">
           Сгенерировать закодированный токен

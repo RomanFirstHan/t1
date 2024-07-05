@@ -44,13 +44,7 @@ function StepN1({ setEmail, setLastName, setRoles, setName, roles, handleIncreas
         </div>
         <button className='button form__button'>Получить список ролей</button>
       </form>
-      <div style={{ fontSize: '30px' }}>
-        {roles}
-      </div>
-      <div>{isLoading && <p className='s'>Loading...</p>}</div>
-      <div className='form__image'>
-        <img src="" alt="" />
-      </div>
+      <div>{isLoading && <p className='loading'>Грузим ответ</p>}</div>
     </>
   )
   // return(state)

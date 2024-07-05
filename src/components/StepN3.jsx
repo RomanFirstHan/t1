@@ -22,7 +22,7 @@ export default function StepN3({
 
 
   return (
-    <div className="section--form">
+    <div className="section-form">
       <div className="section__form form">
         <div className="form__title title">
           Получить персонализированный код

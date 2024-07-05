@@ -16,6 +16,7 @@
 }
 
 .block__body {
+   transition-duration: 0.5s;
    padding: 60px;
    background-color: #F3F3F3;
    border-radius: 45px;
