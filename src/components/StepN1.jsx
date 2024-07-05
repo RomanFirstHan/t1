@@ -1,24 +1,16 @@
 import React, { useState } from 'react'
+import { url } from '../constans.js'
 
+export default function StepN1({ setEmail, setLastName, setRoles, setName, handleIncreaseStep }) {
 
-function StepN1({ setEmail, setLastName, setRoles, setName, roles, handleIncreaseStep }) {
-
-  // const tap = (e) =>{
-  //   e.preventDefault()
-  // }
-
-  // const [email, setEmail] = useState('')
-  // const [name, setName] = useState('')
-  // const [lastName, setLastName] = useState('')
-  // const [roles, setRoles] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
-    fetch('http://193.19.100.32:7000/api/get-roles', {
+    fetch(url +'/api/get-roles', {
       'method': 'GET',
-
     })
       .then(response => response.json())
       .then(result => setRoles(result.roles))
@@ -47,8 +39,6 @@ function StepN1({ setEmail, setLastName, setRoles, setName, roles, handleIncreas
       <div>{isLoading && <p className='loading'>Грузим ответ</p>}</div>
     </>
   )
-  // return(state)
 }
 
 
-export default StepN1

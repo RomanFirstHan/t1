@@ -1,19 +1,24 @@
 import React from 'react'
+import { url } from '../constans.js'
+import { baseToken } from '../utils.js'
 
 export default function StepN5({answer, email, setAnswer, handleIncreaseStep}) {
+  
+
+  function base (){
+    return window.btoa(email + ':' + answer)
+  
+}
 
    const token = base()
    const body = {      
          "token": token,
          "status": "increased"       
    }
-
-
-
-   const code = "*".repeat(token.length-4) + token.slice(-4);
+   const code = baseToken(token);
 
    const handleSubmit = async () => {
-      fetch('http://193.19.100.32:7000/api/set-status', {
+      fetch(url + '/api/set-status', {
         'method': 'POST',
         'body': JSON.stringify(body),
          'headers': {'Content-Type': 'application/json'}
@@ -25,11 +30,7 @@ export default function StepN5({answer, email, setAnswer, handleIncreaseStep}) {
         .catch(err => console.log(err))
     }
 
-   function base (){
-         return window.btoa(email + ':' + answer)
-       
-   }
-
+    
 
   return (
    <div className="section-form">

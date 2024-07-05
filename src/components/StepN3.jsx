@@ -1,4 +1,5 @@
 import React from "react";
+import { url } from '../constans.js'
 
 export default function StepN3({
   email,
@@ -6,13 +7,11 @@ export default function StepN3({
   handleIncreaseStep,
   setAnswer,
 }) {
-  const url = "http://193.19.100.32:7000/api/get-code?email=" + email;
+  const urlEmail = url + "/api/get-code?email=" + email;
 
   const handleSubmit = async () => {
-    fetch(url, {
-      method: "GET",
-      //   'body': JSON.stringify(body),
-      // 'headers': {'Content-Type': 'application/json'}
+    fetch(urlEmail, {
+      'method': "GET",
     })
       .then((response) => response.json())
       .then((result) => setAnswer(result))

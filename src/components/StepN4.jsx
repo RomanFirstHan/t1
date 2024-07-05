@@ -1,15 +1,12 @@
 import React from "react";
+import { baseToken } from '../utils.js'
 
-export default function StepN4({ email, handleIncreaseStep, answer }) {
-  const code = "*".repeat(answer.length-4) + answer.slice(-4);
+export default function StepN4({ handleIncreaseStep, answer }) {
+  const code = baseToken(answer);
 
   const handleSubmit = () => {
     handleIncreaseStep();
-  };
-
-  
-
-  
+  };  
 
   return (
     <div className="section-form">
